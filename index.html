@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meu Amor ❤️</title>
+</head>
+
+<body style="background:pink; text-align:center; font-family:Arial">
+
+<h1>Oi meu amor ❤️</h1>
+
+<p>Eu fiz esse site só para você.</p>
+
+<p>Eu te amo muito 💖</p>
+
+<button onclick="alert('Você é o amor da minha vida, o amor para a minha vida toda ❤️')">
+Clique aqui
+</button>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Para minha namorada ❤️</title>
+
+<style>
+
+body{
+background:pink;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+h1{
+margin-top:100px;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:24px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<script>
+
+function criarCoracao(){
+const heart = document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML = "❤️";
+
+heart.style.left = Math.random()*100 + "vw";
+heart.style.animationDuration = (Math.random()*3+2) + "s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+}
+
+setInterval(criarCoracao,300);
+
+</script>
+
+<button onclick="surpresa()">Abrir surpresa ❤️</button>
+
+<br/><br/>
+
+<div style="text-align:center;">
+<img id="foto" src="/static/foto.jpg" width="300"
+style="display:none; border-radius:20px; box-shadow:0px 0px 20px red;"/>
+</div>
+
+<audio id="musica">
+<source src="/static/musica.mp3" type="audio/mpeg"/>
+</audio>
+
+<script>
+function surpresa(){
+    document.getElementById("musica").play();
+    document.getElementById("foto").style.display = "block";
+}
+</script>
+
+<style>
+button{
+font-size:20px;
+padding:10px 20px;
+background:red;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+
+</body>
+</html>
+
+<style>
+.foto{
+display:block;
+margin:auto;
+border-radius:20px;
+box-shadow:0px 0px 20px red;
+}
+</style>
